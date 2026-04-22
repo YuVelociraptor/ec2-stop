@@ -5,7 +5,7 @@ import boto3
 import os
 
 region = os.getenv('EC2_REGION')
-instances = [os.getenv('INSTANCE')]
+instances = os.getenv('INSTANCES').split(",")
 slack_url = os.getenv('SLACK_URL')
 
 ec2 = boto3.client('ec2', region_name=region)
