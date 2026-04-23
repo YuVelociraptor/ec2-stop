@@ -27,6 +27,6 @@ def post_slack(message):
 
 def lambda_handler(event, context):
 
-    # ec2.stop_instances(InstanceIds=instances)
+    ec2.stop_instances(InstanceIds=instances)
     post_slack('EC2 Stoped')
 
